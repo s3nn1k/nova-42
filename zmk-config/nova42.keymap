@@ -89,10 +89,10 @@
             bindings = <
                 // Row 1: · · 1 2 3 + * [ ] ^ · ·
                 &trans  &trans    &kp N1  &kp N2  &kp N3  &kp PLUS   &kp ASTRK  &kp LBKT  &kp RBKT  &kp CARET  &trans  &trans
-                // Row 2: · % 4 5 6 = # { } & $ ·
-                &trans  &kp PRCNT &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp HASH   &kp LBRC  &kp RBRC  &kp AMPS   &kp DLLR &trans
-                // Row 3: · · 7 8 9 0 ! ( ) @ · ·
-                &trans  &trans    &kp N7  &kp N8  &kp N9  &kp N0     &kp EXCL   &kp LPAR  &kp RPAR  &kp AT     &trans  &trans
+                // Row 2: · % 4 5 6 = # ( ) & $ ·
+                &trans  &kp PRCNT &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp HASH   &kp LPAR  &kp RPAR  &kp AMPS   &kp DLLR &trans
+                // Row 3: · · 7 8 9 0 ! { } @ · ·
+                &trans  &trans    &kp N7  &kp N8  &kp N9  &kp N0     &kp EXCL   &kp LBRC  &kp RBRC  &kp AT     &trans  &trans
                 // Thumb cluster
                 &trans  &trans  &trans    &trans  &trans  &trans
             >;
