@@ -1,0 +1,12 @@
+file_format: "1"
+id: nova42
+name: Nova42
+type: shield
+url: https://github.com/s3nn1k/nova42
+requires: [pro_micro]
+features:
+  - keys
+  - studio
+siblings:
+  - nova42_left
+  - nova42_right

@@ -1,0 +1,8 @@
+# Copyright (c) 2026 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_NOVA42_LEFT
+    def_bool $(shields_list_contains,nova42_left)
+
+config SHIELD_NOVA42_RIGHT
+    def_bool $(shields_list_contains,nova42_right)
