@@ -45,17 +45,6 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        // SPACE + ENTER = TAB
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <38 39>;
-            bindings = <&kp TAB>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,18 +55,18 @@
             display-name = "Base";
             bindings = <
                 // Row 1 (Top letters)
-                // | ] | Q | W | E | R | T |   | Y | U | I | O | P | [ |
-                &kp RBKT   &kp Q        &kp W        &kp E        &kp R         &kp T      &kp Y  &kp U         &kp I        &kp O        &kp P           &kp LBKT
+                // | ` | Q | W | E | R | T |   | Y | U | I | O | P | [ |
+                &kp GRAVE   &kp Q        &kp W        &kp E        &kp R         &kp T      &kp Y  &kp U         &kp I        &kp O        &kp P           &kp LBKT
 
                 // Row 2 (Home row) — hold for modifier, tap for letter
-                // | ` | A/LCTRL | S/LALT | D/LGUI | F/LSHFT | G |   | H | J/RSHFT | K/RGUI | L/RALT | ;/RCTRL | ' |
-                &kp GRAVE  &hrml LCTRL A &hrml LALT S &hrml LGUI D &hrml LSHFT F &kp G      &kp H  &hrmr RSHFT J &hrmr RGUI K &hrmr RALT L &hrmr RCTRL SEMI &kp SQT
+                // | TAB | A/LCTRL | S/LALT | D/LGUI | F/LSHFT | G |   | H | J/RSHFT | K/RGUI | L/RALT | ;/RCTRL | ' |
+                &kp TAB &hrml LCTRL A &hrml LALT S &hrml LGUI D &hrml LSHFT F &kp G      &kp H  &hrmr RSHFT J &hrmr RGUI K &hrmr RALT L &hrmr RCTRL SEMI &kp SQT
 
                 // Row 3 (Bottom letters)
-                // | \ | Z | X | C | V | B |   | N | M | , | . | / | - |
-                &kp BSLH   &kp Z        &kp X        &kp C        &kp V         &kp B      &kp N  &kp M         &kp COMMA    &kp DOT      &kp FSLH        &kp MINUS
+                // | ] | Z | X | C | V | B |   | N | M | , | . | / | \ |
+                &kp RBKT   &kp Z        &kp X        &kp C        &kp V         &kp B      &kp N  &kp M         &kp COMMA    &kp DOT      &kp FSLH        &kp BSLH 
 
-                // Thumb cluster  (SPACE+ENTER = TAB via combo)
+                // Thumb cluster
                 // | ESC | MO(Raise) | SPACE |   | ENTER | MO(Lower) | BACKSPACE |
                 &kp ESC  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp BSPC
             >;
@@ -106,10 +95,10 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-                // Row 1: · · 1 2 3 + * [ ] ^ · ·
-                &trans  &trans     &kp N1  &kp N2  &kp N3  &kp PLUS   &kp ASTRK  &kp LBKT  &kp RBKT  &kp CARET  &trans    &trans
-                // Row 2: · % 4 5 6 = # ( ) & $ ·
-                &trans  &kp PRCNT  &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp HASH   &kp LPAR  &kp RPAR  &kp AMPS   &kp DLLR  &trans
+                // Row 1: · ^ 1 2 3 + = [ ] % & ·
+                &trans  &kp CARET  &kp N1  &kp N2  &kp N3  &kp PLUS   &kp EQUAL  &kp LBKT  &kp RBKT  &kp PRCNT  &kp AMPS  &trans
+                // Row 2: · # 4 5 6 - _ ( ) * $ ·
+                &trans  &kp HASH   &kp N4  &kp N5  &kp N6  &kp MINUS  &kp UNDER  &kp LPAR  &kp RPAR  &kp ASTRK  &kp DLLR  &trans
                 // Row 3: · · 7 8 9 0 ! { } @ · ·
                 &trans  &trans     &kp N7  &kp N8  &kp N9  &kp N0     &kp EXCL   &kp LBRC  &kp RBRC  &kp AT     &trans    &trans
                 // Thumb cluster
